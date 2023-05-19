@@ -16,9 +16,23 @@ jobs:
     name: List issues
     runs-on: ubuntu-latest
     steps:
-      - name: List out-of-office issues
+      - name: List purchase request issues
         uses: actions/select-matching-issues@v1
         with:
           format: list
           query: 'label:"purchase request"'
           token: ${{ github.token }}
+          run: echo "{name}={value}" >> $GITHUB_OUTPUT
+  job2:
+    name: parse List
+    runs-on: ubuntu-latest
+    steps:
+      - name: parse purchase request issues
+        uses: actions/parse-matching-issues@v1
+        with:
+          format: list
+          token:  ${{ github.token }}
+          name: Set output
+          run: echo "{name}={value}" >> $GITHUB_OUTPUT
+          
+    
