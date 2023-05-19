@@ -12,8 +12,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  List:
-    name: List open issues labeled "out-of-office"
+  metadatalist:
+    name: List issues
     runs-on: ubuntu-latest
     steps:
       - name: List out-of-office issues
