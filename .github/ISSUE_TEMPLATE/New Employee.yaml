@@ -1,23 +1,29 @@
-name: Bug Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+name: New Employee Form
+description: Submit a form to have IT onboard new employee.
+title: "New Employee Form"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+
   - type: input
-    id: contact
+    id: name
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Employee Name
+      placeholder: John Smith
     validations:
-      required: false
+      required: true
+  - type: input
+    id: hire-date
+    attributes:
+      label: Hire Date
+      placeholder: MM/DD/YY
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Suggested Email
+      placeholder: jsmith@ore.design
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
